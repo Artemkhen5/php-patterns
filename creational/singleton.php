@@ -4,6 +4,10 @@ final class Singleton {
     private static ?self $instance = null;
     private static string $name;
 
+    private function __construct()
+    {
+    }
+
     public static function getName(): string
     {
         return self::$name;
@@ -24,12 +28,10 @@ final class Singleton {
 
     public function __clone(): void
     {
-        // TODO: Implement __clone() method.
     }
 
     public function __wakeup(): void
     {
-        // TODO: Implement __wakeup() method.
     }
 }
 
